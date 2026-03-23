@@ -1,0 +1,1 @@
+make a simple invoice for amount 5000
