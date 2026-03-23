@@ -1,8 +1,10 @@
-# AI Digital FTEs - Personal AI Employee Hackathon
+# AI Digital FTEs - Personal AI Employee (Bronze Tier)
 
 > **Tagline:** Your life and business on autopilot. Local-first, agent-driven, human-in-the-loop.
 
-This repository contains the complete blueprint and working implementation for building **Personal AI Employees** (Digital FTEs) - autonomous AI agents that manage personal and business affairs 24/7 using **Qwen Code** and **Obsidian**.
+This repository contains a **working implementation** of a Personal AI Employee (Digital FTE) - an autonomous AI agent that manages personal and business affairs 24/7 using **Qwen Code** and **Obsidian**.
+
+**Current Status:** ✅ **Bronze Tier Complete** (21/21 checks passed)
 
 ---
 
@@ -10,28 +12,30 @@ This repository contains the complete blueprint and working implementation for b
 
 | Metric | Value |
 |--------|-------|
-| **Project Type** | AI Automation Framework |
-| **Primary AI** | Qwen Code |
+| **Tier** | Bronze (Foundation) |
+| **Primary AI** | Qwen Code v0.12.6 |
 | **Knowledge Base** | Obsidian Markdown |
 | **Architecture** | Local-first, Privacy-focused |
-| **Status** | ✅ Bronze Tier Complete |
-| **Verification** | 21/21 checks passed |
+| **Verification** | ✅ 21/21 checks passed |
+| **Time to Build** | 8-12 hours |
 
 ---
 
-## 🎯 Core Concept
+## 🎯 What is Bronze Tier?
 
-Build an AI agent that works like a human employee but with:
+Bronze Tier is the **minimum viable deliverable** for the AI Employee hackathon. It provides the foundational layer for autonomous AI automation.
 
-| Feature | Human FTE | Digital FTE |
-|---------|-----------|-------------|
-| Availability | 40 hours/week | **168 hours/week** (24/7) |
-| Monthly Cost | $4,000 – $8,000+ | **$500 – $2,000** |
-| Ramp-up Time | 3 – 6 Months | **Instant** |
-| Consistency | 85–95% accuracy | **99%+ consistency** |
-| Cost per Task | ~$5.00 | **~$0.50** |
+### Bronze Tier Deliverables (All Complete ✅)
 
-**💡 The 'Aha!' Moment:** 85-90% cost reduction compared to human employees.
+| # | Deliverable | Status |
+|---|-------------|--------|
+| 1 | Obsidian vault with Dashboard.md | ✅ Complete |
+| 2 | Company_Handbook.md with rules | ✅ Complete |
+| 3 | Business_Goals.md template | ✅ Complete |
+| 4 | Basic folder structure | ✅ Complete |
+| 5 | One working Watcher (Filesystem) | ✅ Complete |
+| 6 | Qwen Code integration | ✅ Complete |
+| 7 | Ralph Wiggum plugin | ✅ Complete |
 
 ---
 
@@ -40,23 +44,15 @@ Build an AI agent that works like a human employee but with:
 ```
 ai-digital-FTEs/
 │
-├── 📄 README.md                          # This file - Complete project summary
+├── 📄 README.md                          # This file - Bronze Tier summary
 ├── 📄 Personal AI Employee Hackathon...  # Main blueprint (1201 lines)
 ├── 📄 QWEN.md                            # AI assistant context
 ├── 📄 skills-lock.json                   # Installed skills tracker
-├── 📄 verify_bronze_tier.py              # Verification script
+├── 📄 verify_bronze_tier.py              # Verification script (21 checks)
 │
 ├── 📂 .qwen/                             # Qwen Code configurations
 │   └── skills/
-│       └── browsing-with-playwright/     # Web automation skill
-│           ├── SKILL.md
-│           ├── references/
-│           │   └── playwright-tools.md
-│           └── scripts/
-│               ├── mcp-client.py
-│               ├── start-server.sh
-│               ├── stop-server.sh
-│               └── verify.py
+│       └── browsing-with-playwright/     # Web automation skill (for future tiers)
 │
 └── 📂 AI_Employee_Vault/                 # 🏠 Obsidian Vault (AI Employee Workspace)
     ├── 📄 Dashboard.md                   # Real-time status dashboard
@@ -74,42 +70,43 @@ ai-digital-FTEs/
     ├── 📂 Accounting/                    # Financial records
     ├── 📂 Invoices/                      # Generated invoices
     └── 📂 scripts/                       # Automation scripts
-        ├── base_watcher.py               # Base class for watchers
-        ├── filesystem_watcher.py         # Monitors Inbox folder
+        ├── base_watcher.py               # Base class for all watchers
+        ├── filesystem_watcher.py         # Monitors Inbox folder (Bronze)
         ├── orchestrator.py               # Triggers Qwen Code
         ├── requirements.txt              # Python dependencies
-        └── start_ai_employee.bat         # Windows startup script
+        ├── start_ai_employee.bat         # Windows startup script
+        └── ralph_wiggum.py               # Stop hook for continuous iteration
 ```
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Bronze Tier Architecture
 
-### Perception → Reasoning → Action
+### Simple Flow: Perception → Reasoning → Action
 
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │   PERCEPTION    │────▶│    REASONING    │────▶│     ACTION      │
 │                 │     │                 │     │                 │
-│ • File Watchers │     │ • Qwen Code     │     │ • MCP Servers   │
-│ • Gmail API     │     │ • Plan.md       │     │ • Email Send    │
-│ • WhatsApp      │     │ • Decision Tree │     │ • Browser Auto  │
-│ • Bank APIs     │     │ • Handbook Rules│     │ • Payments      │
+│ File Watcher    │     │ Qwen Code       │     │ Manual Execute  │
+│ (filesystem)    │     │ (interactive)   │     │ (via Qwen)      │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
         │                       │                       │
         ▼                       ▼                       ▼
-  Creates .md files      Creates plans          Executes tasks
-  in Needs_Action/       in Plans/              Moves to Done/
+  Creates .md files      Creates .qwen_         User runs qwen
+  in Needs_Action/       pending.md             and pastes prompt
 ```
 
-### Key Components
+### Key Components (Bronze Tier)
 
-| Layer | Component | Technology | Purpose |
-|-------|-----------|------------|---------|
-| **Brain** | Qwen Code | AI LLM | Reasoning engine, decision making |
-| **Memory** | Obsidian | Markdown | Dashboard, handbook, knowledge base |
-| **Senses** | Watchers | Python | Monitor Gmail, WhatsApp, filesystems |
-| **Hands** | MCP Servers | Node.js/Python | Execute external actions |
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| **Brain** | Qwen Code | Reasoning engine, decision making |
+| **Memory** | Obsidian | Dashboard, handbook, knowledge base |
+| **Senses** | Filesystem Watcher | Monitors Inbox folder for new files |
+| **Hands** | User + Qwen | Manual execution via Qwen Code |
+
+**Note:** Bronze Tier uses **manual Qwen execution**. Silver Tier adds automated MCP servers.
 
 ---
 
@@ -117,143 +114,69 @@ ai-digital-FTEs/
 
 ### Prerequisites
 
-| Component | Version | Install |
-|-----------|---------|---------|
+| Component | Version | Install Command |
+|-----------|---------|-----------------|
 | Python | 3.13+ | [python.org](https://python.org) |
 | Qwen Code | Latest | `pip install qwen-code` |
 | Obsidian | v1.10.6+ | [obsidian.md](https://obsidian.md) |
-| Node.js | v24+ LTS | [nodejs.org](https://nodejs.org) |
+| watchdog | 3.0.0+ | `pip install watchdog` |
 
-### Installation
+### Installation (5 minutes)
 
 ```bash
-# 1. Clone the repository
-git clone <repository-url>
-cd ai-digital-FTEs
+# 1. Navigate to the repository
+cd C:\Users\Evantagers\Documents\GitHub\ai-digital-FTEs
 
 # 2. Install Python dependencies
-cd AI_Employee_Vault/scripts
+cd AI_Employee_Vault\scripts
 pip install -r requirements.txt
 
-# 3. Verify setup
+# 3. Verify Bronze Tier setup
 cd ../..
 python verify_bronze_tier.py AI_Employee_Vault
 ```
 
+**Expected output:** `✓ All Bronze Tier requirements met!`
+
 ### Running the AI Employee
 
-**Option 1: Using the batch file (Windows)**
+**Step 1: Start the watchers**
 ```cmd
 cd AI_Employee_Vault
 scripts\start_ai_employee.bat
 ```
 
-**Option 2: Manual start**
-```bash
-# Terminal 1: Start Filesystem Watcher
-cd AI_Employee_Vault/scripts
-python filesystem_watcher.py ..
+This opens two terminal windows:
+- **Filesystem Watcher** - Monitors `Inbox/` for new files
+- **Orchestrator** - Creates prompts for Qwen Code
 
-# Terminal 2: Start Orchestrator
-cd AI_Employee_Vault/scripts
-python orchestrator.py ..
+**Step 2: Test the system**
+```bash
+# Drop a test file in Inbox
+echo "Process this request" > Inbox/test.txt
 ```
 
-**Option 3: Process with Qwen Code**
+**Step 3: Process with Qwen Code**
 ```bash
 cd AI_Employee_Vault
 qwen
-# Then paste prompt from .qwen_pending.md
+# Copy prompt from .qwen_pending.md and paste
 ```
 
 ---
 
-## 📋 Hackathon Tiers
-
-### ✅ Bronze Tier (COMPLETE)
-**Time:** 8-12 hours | **Status:** ✅ 21/21 checks passed
-
-- [x] Obsidian vault with Dashboard.md
-- [x] Company_Handbook.md with rules
-- [x] Business_Goals.md template
-- [x] Basic folder structure (Inbox, Needs_Action, Done, etc.)
-- [x] One working Watcher (Filesystem)
-- [x] Qwen Code integration
-- [x] Ralph Wiggum plugin for continuous iteration
-
-### 🔲 Silver Tier (Next Steps)
-**Time:** 20-30 hours
-
-- [ ] Gmail Watcher integration
-- [ ] WhatsApp Watcher integration
-- [ ] MCP server for email sending
-- [ ] Approval workflow automation
-- [ ] Scheduled tasks (cron/Task Scheduler)
-
-### 🔲 Gold Tier
-**Time:** 40+ hours
-
-- [ ] Full cross-domain integration
-- [ ] Odoo accounting integration
-- [ ] Social media auto-posting
-- [ ] Weekly CEO Briefing generation
-- [ ] Error recovery and audit logging
-
-### 🔲 Platinum Tier
-**Time:** 60+ hours
-
-- [ ] Cloud deployment (24/7 operation)
-- [ ] Multi-agent sync
-- [ ] Work-zone specialization
-- [ ] A2A (Agent-to-Agent) communication
-
----
-
-## 📂 File Descriptions
-
-### Root Level Files
-
-| File | Purpose |
-|------|---------|
-| `README.md` | This comprehensive project summary |
-| `Personal AI Employee Hackathon 0_...md` | Complete 1201-line architectural blueprint |
-| `QWEN.md` | Context file for AI assistants |
-| `skills-lock.json` | Tracks installed Qwen skills |
-| `verify_bronze_tier.py` | Verification script (21 checks) |
-
-### AI_Employee_Vault Files
-
-| File | Purpose |
-|------|---------|
-| `Dashboard.md` | Real-time status, metrics, alerts |
-| `Company_Handbook.md` | AI employee rules and procedures |
-| `Business_Goals.md` | Objectives, targets, subscription list |
-| `README.md` | Vault-specific usage instructions |
-
-### Scripts
-
-| File | Purpose |
-|------|---------|
-| `base_watcher.py` | Abstract base class for all watchers |
-| `filesystem_watcher.py` | Monitors Inbox for new files |
-| `orchestrator.py` | Triggers Qwen Code on pending items |
-| `start_ai_employee.bat` | Windows startup script |
-| `ralph_wiggum.py` | Stop hook for continuous iteration |
-
----
-
-## 🔄 How It Works
+## 🔄 How It Works (Bronze Tier)
 
 ### Complete Workflow
 
 ```
 1. User drops file in Inbox/
         ↓
-2. Filesystem Watcher detects new file
+2. Filesystem Watcher detects new file (within 5 seconds)
         ↓
 3. Creates action file in Needs_Action/
         ↓
-4. Orchestrator detects pending item
+4. Orchestrator detects pending item (every 30 seconds)
         ↓
 5. Creates .qwen_pending.md with prompt
         ↓
@@ -263,78 +186,92 @@ qwen
         ↓
 8. Qwen creates Plan.md for multi-step tasks
         ↓
-9. Sensitive actions → Pending_Approval/
-        ↓
-10. Human moves file to Approved/
-        ↓
-11. Qwen executes approved action
-        ↓
-12. Moves completed items to Done/
+9. Qwen moves completed items to Done/
 ```
 
-### Example: Processing an Invoice Request
+### Example: Processing a Test File
 
 ```
-📥 Inbox/invoice_request.txt
-    ↓
-📋 Needs_Action/FILE_invoice_request_2026-03-23.md
-    ↓
-🤖 Qwen reads and creates plan
-    ↓
-📝 Plans/Sales_Invoice_Client_10000_Plan.md
-    ↓
-⏳ Pending_Approval/Invoice_10000_Approval.md
-    ↓
-✅ Human approves (moves to Approved/)
-    ↓
-📧 Qwen sends invoice via MCP
-    ↓
-📊 Logs result in Logs/
-    ↓
-✅ Moves to Done/
+📥 Inbox/test_task.txt
+    ↓ (Filesystem Watcher detects)
+📋 Needs_Action/FILE_test_task_2026-03-23_03-33-08.md
+    ↓ (Orchestrator creates prompt)
+📝 .qwen_pending.md
+    ↓ (User runs Qwen)
+🤖 Qwen reads and processes
+    ↓ (Creates plan if needed)
+📝 Plans/test_task_Plan.md
+    ↓ (Completes task)
+✅ Done/FILE_test_task_...md
 ```
 
 ---
 
-## 🛠️ Available Skills
+## 📂 File Descriptions
 
-### Installed Skills
+### Root Level Files
 
-| Skill | Purpose | Location |
-|-------|---------|----------|
-| `browsing-with-playwright` | Web automation, form filling, screenshots | `.qwen/skills/browsing-with-playwright/` |
+| File | Purpose |
+|------|---------|
+| `README.md` | This Bronze Tier summary |
+| `Personal AI Employee Hackathon 0_...md` | Complete architectural blueprint (1201 lines) |
+| `QWEN.md` | Context file for AI assistants |
+| `skills-lock.json` | Tracks installed Qwen skills |
+| `verify_bronze_tier.py` | Verification script (21 checks) |
 
-### Skill Capabilities
+### AI_Employee_Vault Core Files
 
-- Navigate websites
-- Fill forms
-- Click elements
-- Take screenshots
-- Extract data
-- Execute JavaScript
+| File | Purpose |
+|------|---------|
+| `Dashboard.md` | Real-time status, metrics, alerts |
+| `Company_Handbook.md` | AI employee rules (response times, approval thresholds) |
+| `Business_Goals.md` | Revenue targets, key metrics, subscription list |
+| `README.md` | Vault-specific usage instructions |
+
+### Scripts (Bronze Tier)
+
+| File | Purpose |
+|------|---------|
+| `base_watcher.py` | Abstract base class for all watchers |
+| `filesystem_watcher.py` | **Bronze:** Monitors Inbox for new files |
+| `orchestrator.py` | Triggers Qwen Code on pending items |
+| `start_ai_employee.bat` | Windows startup script |
+| `ralph_wiggum.py` | Stop hook for continuous iteration |
 
 ---
 
-## 📊 Current Status
+## 📊 Current Vault Status
 
-### Vault Contents (As of analysis)
+### Folder Contents
 
-| Folder | Items | Description |
-|--------|-------|-------------|
-| `Inbox/` | 7 files | Pending input files |
-| `Needs_Action/` | 0 files | Ready for processing |
-| `Plans/` | 6 files | Active task plans |
-| `Pending_Approval/` | 0 files | Awaiting approval |
-| `Approved/` | 10 files | Ready for execution |
-| `Done/` | 10 files | Completed tasks |
-| `Invoices/` | 3 files | Generated invoices |
-| `Logs/` | 5 files | System logs |
+| Folder | Purpose | Current Items |
+|--------|---------|---------------|
+| `Inbox/` | Drop files here | 7 files |
+| `Needs_Action/` | Awaiting processing | 0 files |
+| `Plans/` | Multi-step task plans | 6 files |
+| `Pending_Approval/` | Awaiting human approval | 0 files |
+| `Approved/` | Ready for execution | 10 files |
+| `Done/` | Completed tasks | 10 files |
+| `Invoices/` | Generated invoices | 3 files |
+| `Logs/` | System logs | 5 files |
 
 ### Generated Documents
 
-- **Invoices:** INV-2026-001, INV-2026-002, INV-2026-003
-- **Plans:** Invoice plans, Payment receipt plans, Utility bill plans
-- **Approvals:** Sales invoices, Utility bills, Payment approvals
+**Invoices:**
+- INV-2026-001.md
+- INV-2026-002.md
+- INV-2026-003.md
+
+**Plans:**
+- Invoice_5000_Plan.md
+- Payment_Receipt_DanishYameen_10000_Plan.md
+- Utility_Bill_8000_Plan.md
+- (and 3 more)
+
+**Approvals:**
+- Sales_Invoice_DanishYameen_10000_Approval.md
+- Utility_Bill_8000_Approval.md
+- (and 8 more)
 
 ---
 
@@ -347,21 +284,35 @@ qwen
 watchdog>=3.0.0
 ```
 
-### Qwen Code Setup
+### Verify Qwen Code
 
 ```bash
-# Verify installation
 qwen --version
-
-# Expected output: 0.12.6
+# Expected: 0.12.6
 ```
 
-### Obsidian Vault
+### Verify Bronze Tier
 
-Open `AI_Employee_Vault/` as a vault in Obsidian:
-1. Open Obsidian
-2. Click "Open folder as vault"
-3. Select `AI_Employee_Vault/`
+```bash
+python verify_bronze_tier.py AI_Employee_Vault
+```
+
+**Expected output:**
+```
+============================================================
+  Bronze Tier Verification
+============================================================
+✓ Dashboard.md exists
+✓ Company_Handbook.md exists
+✓ Business_Goals.md exists
+✓ /Inbox folder exists
+✓ /Needs_Action folder exists
+...
+============================================================
+  Results: 21 passed, 0 failed, 0 warnings
+============================================================
+✓ All Bronze Tier requirements met!
+```
 
 ---
 
@@ -370,50 +321,30 @@ Open `AI_Employee_Vault/` as a vault in Obsidian:
 **Weekly Research & Showcase**
 - **When:** Wednesdays at 10:00 PM PKT
 - **Zoom:** [Join Meeting](https://us06web.zoom.us/j/87188707642?pwd=a9XloCsinvn1JzICbPc2YGUvWTbOTr.1)
+- **Meeting ID:** 871 8870 7642
+- **Passcode:** 744832
 - **YouTube:** [@panaversity](https://www.youtube.com/@panaversity)
 
 ---
 
 ## 🎓 Learning Resources
 
-### Prerequisites (Complete First)
+### Prerequisites (Already Complete ✅)
 
-| Topic | Resource | Time |
-|-------|----------|------|
-| Qwen Code Fundamentals | See QWEN.md | 3 hours |
-| Obsidian Fundamentals | help.obsidian.md | 30 min |
-| Python File I/O | realpython.com | 1 hour |
-| Agent Skills | platform.claude.com/docs | 2 hours |
+| Topic | Status |
+|-------|--------|
+| Qwen Code Fundamentals | ✅ Complete |
+| Obsidian Fundamentals | ✅ Complete |
+| Python File I/O | ✅ Complete |
+| Agent Skills | ✅ Complete |
 
-### Core Learning
+### For Next Tier (Silver)
 
 | Topic | Resource |
 |-------|----------|
-| Building MCP Servers | modelcontextprotocol.io/quickstart |
-| Playwright Automation | playwright.dev/python |
-| Agent Architecture | Anthropic documentation |
-
----
-
-## 🏆 Judging Criteria
-
-| Criterion | Weight | Description |
-|-----------|--------|-------------|
-| Functionality | 30% | Does it work? Core features complete? |
-| Innovation | 25% | Creative solutions, novel integrations |
-| Practicality | 20% | Would you actually use this daily? |
-| Security | 15% | Proper credential handling, HITL safeguards |
-| Documentation | 10% | Clear README, setup instructions, demo |
-
----
-
-## 📄 License & Credits
-
-**Project:** AI Digital FTEs - Personal AI Employee Hackathon  
-**Blueprint:** 1201-line comprehensive architectural guide  
-**Implementation:** Bronze Tier Complete  
-**AI Engine:** Qwen Code (v0.12.6)  
-**Knowledge Base:** Obsidian Markdown  
+| Gmail API | developers.google.com/gmail/api |
+| MCP Servers | modelcontextprotocol.io |
+| Playwright | playwright.dev/python |
 
 ---
 
@@ -423,10 +354,16 @@ Open `AI_Employee_Vault/` as a vault in Obsidian:
 
 | Issue | Solution |
 |-------|----------|
-| Watcher not detecting files | Check `Inbox/` exists, view `Logs/` |
-| Qwen not found | Run `qwen --version`, reinstall if needed |
+| Watcher not detecting files | Check `Inbox/` exists, view `Logs/watcher_*.log` |
+| Qwen not found | Run `qwen --version`, ensure it's in PATH |
 | Permission errors | Run terminal as Administrator |
-| Orchestrator timeout | Normal - runs continuously until stopped |
+| Orchestrator not creating prompts | Check `Logs/orchestrator_*.log` |
+
+### Log Files
+
+Check these files for debugging:
+- `Logs/watcher_2026-03-23.log` - Filesystem Watcher logs
+- `Logs/orchestrator_2026-03-23.log` - Orchestrator logs
 
 ### Getting Help
 
@@ -437,15 +374,38 @@ Open `AI_Employee_Vault/` as a vault in Obsidian:
 
 ---
 
-## 📈 Next Steps
+## 📈 What's Next? (After Bronze)
 
-1. **Test the system:** Drop a file in `Inbox/` and process it
-2. **Customize handbook:** Edit `Company_Handbook.md` with your rules
-3. **Set goals:** Update `Business_Goals.md` with your targets
-4. **Upgrade to Silver:** Add Gmail/WhatsApp watchers
-5. **Deploy:** Consider Platinum tier for 24/7 cloud operation
+### Silver Tier Upgrades
+
+| Feature | Bronze | Silver |
+|---------|--------|--------|
+| Watchers | Filesystem only | Gmail + WhatsApp + LinkedIn |
+| Action Execution | Manual (via Qwen) | Automated (via MCP) |
+| Approval Workflow | Manual file move | Automated detection |
+| Scheduling | Manual | cron/Task Scheduler |
+
+### To Upgrade to Silver
+
+1. Add Gmail Watcher (uses Google API)
+2. Add WhatsApp Watcher (uses Playwright)
+3. Create MCP server for email sending
+4. Automate approval detection
+5. Add scheduled tasks
+
+---
+
+## 📄 Credits
+
+**Project:** AI Digital FTEs - Personal AI Employee  
+**Tier:** Bronze (Foundation)  
+**Implementation Status:** ✅ Complete  
+**AI Engine:** Qwen Code v0.12.6  
+**Knowledge Base:** Obsidian Markdown  
+**Blueprint:** 1201-line hackathon guide  
 
 ---
 
 *AI Employee v0.1 (Bronze Tier) - Built with Qwen Code & Obsidian*  
-*Last Updated: March 23, 2026*
+*Last Updated: March 23, 2026*  
+*Verification: 21/21 checks passed*
